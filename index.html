@@ -1,0 +1,209 @@
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300|Questrial&display=swap|" rel="stylesheet"> 
+
+<style>
+
+.checkbox{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:20;
+}
+
+#dropdown{
+  height: 30px;
+  width: 40%;
+  padding: 5px;
+  margin: 10px;  
+  margin-top: 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+#description{
+    color:black;
+    text-align: center; 
+    font-family: 'Amatic SC', cursive;
+    font-size: 40;
+    font-style: 700; 
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.input-field {
+  height: 30px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 30%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:20;
+}
+
+.radio, .checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:20;
+}
+
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 40%;
+  vertical-align: middle;
+}
+
+#small-words{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:20;
+}
+
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+}
+
+#survey-form{
+    background-color: #D9E5DD;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 25px;
+}
+
+#title{
+    color: black; 
+    text-align: center;  
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 77;
+    margin-top: 5%;
+}
+
+.userRatings{
+  float: left;
+
+}
+
+</style>
+
+<!DOCTYPE html>
+<body>
+    <h1 id="title"> <center>Survey Form</center></h1>
+
+    <p id="description"> Your survery is important to us.  It helps us serve our hungry customers the best ice cream! Thanks!</p>
+    
+
+ 
+
+
+
+
+
+    <form id="survey-form">
+
+        <br> 
+        <br>
+        <br>
+
+        <center>
+
+        <label id="name-label" class="labels" for="name">* Name: </label>
+        <input type="text" class="input-field rightTab" placeholder="Enter your name" id="name" required>
+
+        <label id="email-label" class="labels" for="email">* Email: </label>
+        <input type="email" class="input-field rightTab" placeholder="Enter your email" id="email" required>
+
+        <label id="number-label" class="labels" for="number">* Number: </label>
+        <input type="number" class="input-field rightTab" placeholder="Enter your number" id="number" min="0" max="9" required>
+            <br>
+            <br>
+            <br>
+        <div class="labels"> Cup or Cone?</div>
+        <select id="dropdown" name="currentPos" class="dropdown">
+                <option disabled value>Select an option</option>
+                <option value="both">Both</option>
+                <option value="neither">Neither</option>
+                <option value="cup">Cup</option>
+                <option value="cone">Cone</option>
+        </select>
+
+           <br>
+           <br>
+           <br>
+        
+
+            <div class="labels">
+              <label for="preferences">Your favorite flavor<br>(Check all that apply): </label>
+            </div>
+            <div class="rightTab">
+              <ul id="preferences" style="list-style: none;">
+                <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" >Chocolate</label></li>
+                <li class="checkbox"><label><input name="prefer" value="2" type="checkbox" >Vanilla</label></li>
+                <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" >Durian</label></li>
+                <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" >Coconut</label></li>
+                <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" >Nutella</label></li>
+                <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" >Strawberry</label></li>
+                <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" >Raspberry</label></li>
+                <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" >Cake</label></li>
+                <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" >Banana</label></li>
+                <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" >Cookie</label></li>
+              </ul>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="labels">
+                <label for="preferences">Would you come back here again? </label>
+              </div>
+            <div class="rightTab">
+                <ul style="list-style: none;">
+                  <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+                  <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+                  <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+                </ul>
+              </div>
+         
+              <br>
+              <br>
+              <br>
+
+            <div class="labels">
+                <label for="comments">Any Comments or Suggestions?</label>
+            </div>
+            <div class="rightTab">
+                <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <button id="submit" type="submit">Submit</button>
+
+        </center>  
+        <br> 
+      
+    </form>
+
+</body>
+
